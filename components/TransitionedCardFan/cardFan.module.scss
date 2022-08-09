@@ -1,0 +1,127 @@
+.cardfan {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .cardfan img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border: 12px solid #ffe;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+    transform-origin: center 460px;
+    transition: all 1s linear;
+    float: right;
+  }
+  .cardfan img:first-child {
+    transform: rotate(5deg);
+  }
+  .cardfan img:last-child {
+    transform: rotate(-5deg);
+  }
+  .cardfan:hover img:first-child {
+    transform: rotate(20deg);
+  }
+  .cardfan:hover img:last-child {
+    transform: rotate(-20deg);
+  }
+  .cardfan img.pic3 {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    filter: url(#blur);
+
+    &:hover {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      filter: none;
+      z-index: 100;
+    }
+  }
+  .cardfan img.pic2 {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(#greyscale);
+    filter: gray;
+
+    &:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      filter: none;
+      z-index: 100;
+    }
+  }
+  .cardfan img.pic1 {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    filter: url(#sepia);
+    background-color: #5e2612;
+    filter: alpha(opacity = 50);
+
+    &:hover {
+      -webkit-filter: sepia(0);
+      filter: sepia(0);
+      filter: alpha(opacity = 100);
+      filter: none;
+    }
+  }
+  
+  @media screen and (max-width: 1700px) {
+    .cardfan {
+      height: 200px;
+      margin-bottom: -350px; 
+      margin-top: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 1600px) {
+    .cardfan {
+      margin-top: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .cardfan {
+      width: 70%;
+      margin-top: 30px;
+      height: 380px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .cardfan {
+      width: 80%;
+      margin-top: 20px;
+      height: 230px;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .cardfan {
+      width: 90%;
+      margin-top: 20px;
+      height: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .cardfan {
+      height: 120px;
+      margin-top: 0px;
+      width: 85%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cardfan {
+      height: 40px;
+      margin-top: 0px;
+      width: 70%;
+    }
+    .cardfan img {
+      transform-origin: center 250px;
+      border: 6px solid #ffe;
+    }
+  }
+  
