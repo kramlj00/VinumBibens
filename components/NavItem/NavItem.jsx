@@ -1,12 +1,11 @@
 import Link from "next/link";
+import styles from "./navItem.module.scss";
 
-const NavItem = ({ text, href, active }) => {
+const NavItem = ({ text, href, activeTab }) => {
   return (
     <Link href={href}>
       <a
-        className={`nav__item ${
-          active ? "active" : ""
-        }`}
+        className={`${styles.navItem} ${activeTab === text ? styles.active : ""}`}
       >
         {text}
       </a>

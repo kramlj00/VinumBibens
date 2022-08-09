@@ -2,11 +2,11 @@ import Navbar from "../components/Navbar/Navbar";
 
 export const siteTitle = "Andrijić House";
 
-export default function Layout({ children }) {
+export default function Layout({ children, activeTab }) {
   return (
     <>
       <header>
-        <Navbar />
+        <Navbar activeTab={activeTab}/>
       </header>
       <main>{children}</main>
     </>

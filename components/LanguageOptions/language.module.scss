@@ -1,0 +1,14 @@
+@import 'styles/utils/_variables';
+@import 'styles/utils/_breakpoints';
+
+.languageOptionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    margin-right: $spacing-larger;
+
+    @media screen and (max-width: $tablet) {
+        margin-right: 0;
+    }
+}

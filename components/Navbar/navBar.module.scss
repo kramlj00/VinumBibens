@@ -8,22 +8,10 @@
   }
   .nav{
     display: flex;
-    padding: 0 16px;
+    padding: 0 $spacing-larger;
     justify-content: space-between;
     align-items: center;
-    background-color: #f1f1f1;
-  }
-  .nav__menuBar{
-    display: flex;
-    flex-direction: column;
-    row-gap: 6px;
-    cursor: pointer;
-  }
-  .nav__menuBar div{
-    width: 40px;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
+    background-color: $color-gray-10;
   }
   .nav__menuList{
     display: flex;
@@ -32,14 +20,10 @@
     top: 60px;
     width: 288px;
     row-gap: 24px;
-    right: -288px;
     padding: 24px 16px;
     transition: all 0.2s;
     min-height: calc(100vh - 60px);
-    background-color: #f1f1f1;
-  }
-  .nav__menuList.active{
-    right: 0;
+    background-color: $color-gray-10;
   }
   .nav__link{
     font-size: 18px; 
@@ -82,6 +66,28 @@
     
     .nav__link:hover:before{
      width: 100%;
+    }
+  }
+
+  .bookNowBtn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: $spacing-small $spacing-large;
+    background-color: $color-gold;
+    color: $color-white;
+    font-size: $font-size-medium;
+    border: 1px solid $color-gold;
+
+    @media screen and (max-width: $mobile) {
+        padding: $spacing-small $spacing-medium;
+    }
+
+    &:hover {
+        background-color: #dbae6b;
+        transform: scale(1.03);
+        transition: all 0.4s ease-out; 
     }
   }
   

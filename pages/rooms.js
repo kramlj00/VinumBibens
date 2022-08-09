@@ -2,13 +2,13 @@ import Link from "next/link";
 import Head from 'next/head';
 import Layout from '../layout/layout';
 
-export default function Products() {
+export default function Rooms() {
   return (
-    <Layout>
+    <Layout activeTab="Rooms">
     <Head>
-        <title>Ponuda Vina</title>
+        <title>Rooms</title>
       </Head>
-      <h1>Ponuda vina</h1>
+      <h1>Rooms</h1>
       <h2>
         <Link href="/">Povratak na početnu</Link>
       </h2>
