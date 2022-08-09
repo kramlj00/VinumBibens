@@ -1,15 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./gallery.module.scss";
 import Image from "next/image";
+import FsLightbox from "fslightbox-react";
 
 const ImageGallery = ({ imageList }) => {
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
+
   return (
-    <div className={styles.imagesContainer}>
-      {imageList.map((image, index) => (
-        <div className={styles.imageContainer} key={image.title}>
-            <Image src={image.src} alt={image.title} width={350} height={200} objectFit="cover"/>
-        </div>
-      ))}
+    <div className="items">
+      <div className={styles.imagesContainer}>
+        {imageList.map((image, index) => (
+          <div key={image.src} className={styles.imageContainer}>
+            <Image
+              src={image}
+              alt={image}
+              width={350}
+              height={200}
+              objectFit="cover"
+              onClick={() =>
+                setLightboxController({
+                  toggler: !lightboxController.toggler,
+                  slide: index+1,
+                })
+              }
+            />
+          </div>
+        ))}
+      </div>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={imageList}
+        slide={lightboxController.slide}
+        initialAnimation="scale-in-long"
+        slideChangeAnimation="scale-in"
+      />
     </div>
   );
 };
