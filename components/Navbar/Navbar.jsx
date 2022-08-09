@@ -4,22 +4,25 @@ import NavItem from "../NavItem/NavItem";
 import Logo from "../commons/Logo";
 import styles from "./navBar.module.scss";
 import LanguageOptions from "../LanguageOptions";
+import { FaBars } from "react-icons/fa";
 
 const MENU_LIST = [
   { text: "Rooms", href: "/rooms" },
   { text: "Exterior", href: "/exterior" },
   { text: "Contact us", href: "/contact-us" },
 ];
-const Navbar = ({ activeTab }) => {
+const Navbar = ({ activeTab, toggle }) => {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
+    <header className={styles.navHeader}>
         <Link href={"/"}>
           <a>
             <Logo/>
           </a>
         </Link>
-        <div className={styles.nav__menuList}>
+        <div className={styles.hamburgerBar} onClick={toggle}>
+          <FaBars/>
+        </div>
+        <div className={styles.menuList}>
           {MENU_LIST.map(menu => (
             <div
               key={menu.text}
@@ -36,7 +39,6 @@ const Navbar = ({ activeTab }) => {
           </a>
         </div>
         <LanguageOptions/>
-      </nav>
     </header>
   );
 };

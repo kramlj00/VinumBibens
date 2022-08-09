@@ -8,7 +8,12 @@
     width: 90px;
     margin-right: $spacing-larger;
 
-    @media screen and (max-width: $tablet) {
+    &:last-child {
         margin-right: 0;
     }
+
+    @media screen and (max-width: $large) {
+        display: none;
+        margin-right: 0;
+      }
 }
