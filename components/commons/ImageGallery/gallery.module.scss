@@ -1,0 +1,21 @@
+@import 'styles/utils/_variables';
+@import 'styles/utils/_breakpoints';
+
+.imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+    z-index: -1;
+    margin-top: $spacing-larger;
+}
+
+.imageContainer {
+    cursor: pointer;
+    margin: $spacing-small;
+  
+    &:hover {
+      transform: scale(1.03);
+      transition: all 0.4s ease-out;
+    }
+}
