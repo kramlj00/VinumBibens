@@ -1,0 +1,8 @@
+@import 'styles/utils/_variables';
+
+.logo {
+    color: $color-gold;
+    font-family: $font-family-secondary;
+    font-size: $font-size-extra-large;
+    cursor: pointer;
+}

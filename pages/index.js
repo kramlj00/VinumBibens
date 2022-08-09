@@ -1,20 +1,14 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/Layout/layout";
-import utilStyles from "../styles/utils.module.css";
+import MainImage from "../components/commons/MainImage";
+import Layout, { siteTitle } from "../layout/layout";
 
 export default function Home() {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
+      <MainImage src="/images/home.jpg" name="home.jpg" sayingFirstPart="Enjoy a luxury" sayingSecondPart="experience"/>
     </Layout>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from 'next/head';
-import Layout from '../components/Layout/layout';
+import Layout from '../layout/layout';
 
 export default function Products() {
   return (
