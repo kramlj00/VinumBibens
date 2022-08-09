@@ -13,7 +13,7 @@ const ImageGallery = ({ imageList }) => {
     <div className="items">
       <div className={styles.imagesContainer}>
         {imageList.map((image, index) => (
-          <div key={image.src} className={styles.imageContainer}>
+          <div key={image} className={styles.imageContainer}>
             <Image
               src={image}
               alt={image}
