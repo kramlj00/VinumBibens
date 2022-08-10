@@ -22,6 +22,29 @@ h1 {
     font-size: $font-size-large;
   }
 }
+input {
+  border: none;
+  padding: 12px 15px;
+  margin: 10px 0;
+  width: 100%;
+  font-family: $font-family-main;
+  background-color: $color-gray-10;
+
+  @media screen and (max-width: $small) {
+    font-size: $font-size-medium-small;
+    padding-left: 8px;
+    margin-right: 0px;
+  }
+}
+textarea {
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  resize: none;
+  background-color: $color-gray-10;
+  font-family: $font-family-main;
+}
 .bookNowBtn {
   text-transform: uppercase;
   letter-spacing: 1px;

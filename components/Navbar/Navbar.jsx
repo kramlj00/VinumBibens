@@ -9,7 +9,7 @@ import { FaBars } from "react-icons/fa";
 const MENU_LIST = [
   { text: "Rooms", href: "/rooms" },
   { text: "Exterior", href: "/exterior" },
-  { text: "Contact us", href: "/contact-us" },
+  { text: "Contact us", href: "/contact" },
 ];
 const Navbar = ({ activeTab, toggle, isOpen }) => {
   return (

@@ -7,7 +7,7 @@ const Sidebar = ({ activeTab }) => {
   const MENU_LIST = [
     { text: "Rooms", href: "/rooms" },
     { text: "Exterior", href: "/exterior" },
-    { text: "Contact us", href: "/contact-us" },
+    { text: "Contact us", href: "/contact" },
   ];
 
   return (

@@ -15,6 +15,7 @@ const ImageGallery = ({ imageList }) => {
         {imageList.map((image, index) => (
           <div key={image} className={styles.imageContainer}>
             <Image
+              priority
               src={image}
               alt={image}
               width={350}
@@ -23,7 +24,7 @@ const ImageGallery = ({ imageList }) => {
               onClick={() =>
                 setLightboxController({
                   toggler: !lightboxController.toggler,
-                  slide: index+1,
+                  slide: index + 1,
                 })
               }
             />
