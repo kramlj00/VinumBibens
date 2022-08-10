@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
-@import './utils/_variables.scss';
-@import './utils/_breakpoints.scss';
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
+@import "./utils/_variables.scss";
+@import "./utils/_breakpoints.scss";
 
 * {
   margin: 0;
@@ -20,5 +20,26 @@ h1 {
 
   @media screen and (max-width: $mobile) {
     font-size: $font-size-large;
+  }
+}
+.bookNowBtn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: $spacing-small $spacing-large;
+  background-color: $color-gold;
+  color: $color-white;
+  font-size: $font-size-medium;
+  border: 1px solid $color-gold;
+
+  @media screen and (max-width: $mobile) {
+    padding: $spacing-small $spacing-medium;
+  }
+
+  &:hover {
+    background-color: #dbae6b;
+    transform: scale(1.03);
+    transition: all 0.4s ease-out;
   }
 }

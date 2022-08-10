@@ -1,19 +1,23 @@
-@import 'styles/utils/_variables';
-@import 'styles/utils/_breakpoints';
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
 
-.languageOptionsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90px;
-    margin-right: $spacing-larger;
+.languageOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+  margin-right: $spacing-larger;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    @media screen and (max-width: $large) {
-        display: none;
-        margin-right: 0;
-      }
+  @media screen and (max-width: $large) {
+    margin-right: 0;
+  }
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
 }
