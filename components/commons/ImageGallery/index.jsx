@@ -21,6 +21,8 @@ const ImageGallery = ({ imageList }) => {
               width={350}
               height={200}
               objectFit="cover"
+              placeholder="blur"
+              blurDataURL={image}
               onClick={() =>
                 setLightboxController({
                   toggler: !lightboxController.toggler,

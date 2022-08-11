@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./contact.module.scss";
 
 const ContactForm = () => {
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSenderNameValid, setIsSenderNameValid] = useState(true);
+  const [isSenderEmailValid, setIsSenderEmailValid] = useState(true);
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [showEmailErrorMessage, setShowEmailErrorMessage] = useState(false);
+  const [showEmailSuccessMessage, setShowEmailSuccessMessage] = useState(false);
+
+  const handleSenderNameChange = (value, setValue, setIsValueValid) => {
+    if (/^[a-z\u0161\u0111\u010D\u0107\u017E\u00EB\u002D ]*$/gi.test(value)) {
+      setValue(value);
+    }
+    !value.length || value.length < 3
+      ? setIsValueValid(false)
+      : setIsValueValid(true);
+  };
+
+  const handleEmailChange = (value) => {
+    setSenderEmail(value);
+    /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      value
+    )
+      ? setIsSenderEmailValid(true)
+      : setIsSenderEmailValid(false);
+  };
+
   return (
     <div className={styles.container}>
       <h1>Contact Us</h1>
@@ -29,44 +56,51 @@ const ContactForm = () => {
           <form>
             <input
               type="text"
-              //  value={senderName}
+              value={senderName}
               placeholder="Ime i prezime"
               required
-              //  onChange={(e) =>
-              //    handlesenderNameChange(
-              //      e.target.value,
-              //      setSenderName,
-              //      setIsSenderNameValid
-              //    )
-              //  }
+              onChange={(e) =>
+                handleSenderNameChange(
+                  e.target.value,
+                  setSenderName,
+                  setIsSenderNameValid
+                )
+              }
             />
+            {!isSenderNameValid && senderName.length ? (
+              <p className={styles.errorMessage}>Wrong input</p>
+            ) : <></>}
             <input
-              type="text"
-              //   value={senderEmail}
+              type="email"
+              value={senderEmail}
               placeholder="Email"
               required
-              //   onChange={(e) =>
-              //     handleEmailChange(
-              //       e.target.value,
-              //       setSenderEmail,
-              //       setIsSenderEmailValid
-              //     )
-              //   }
+              onChange={(e) =>
+                handleEmailChange(
+                  e.target.value,
+                  setSenderEmail,
+                  setIsSenderEmailValid
+                )
+              }
             />
+            {!isSenderEmailValid && senderEmail.length ? (
+              <p className={styles.errorMessage}>Wrong input</p>
+            ) : <></>}
             <textarea
               type="text"
               cols="60"
               rows="8"
               id="description"
               maxLength={3000}
-              //   minLength={10}
               placeholder="Poruka"
-              // value={message}
-              // onChange={(e) => {
-              //   setMessage(e.target.value);
-              // }}
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
             />
-            <button type="submit" className={styles.sendEmailBtn}>Pošalji</button>
+            <button type="submit" className={styles.sendEmailBtn}>
+              Pošalji
+            </button>
           </form>
         </section>
       </div>
