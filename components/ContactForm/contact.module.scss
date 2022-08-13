@@ -69,6 +69,10 @@
   }
 }
 
+.contactForm {
+  margin-top: 20px;
+}
+
 .sendEmailBtn {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -92,17 +96,20 @@
   }
 }
 
+.inputContainer {
+  height: 80px;
+}
+
 .errorMessage {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  margin-top: -15px;
-  font-weight: bold;
   color: $color-red-20;
-  position: absolute;
   font-size: $font-size-medium;
+  height: 20px;
 
   @media screen and (max-width: $tablet) {
     font-size: $font-size-medium-small;
   }
+}
+
+.textareaContainer {
+  height: 190px;
 }
