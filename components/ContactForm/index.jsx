@@ -3,9 +3,15 @@ import styles from "./contact.module.scss";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Notification from "../commons/Notifications";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import hr from "../../locales/hr";
 
 const ContactForm = () => {
-  // const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   const [status, setStatus] = useState("");
   const {
     register,
@@ -40,33 +46,37 @@ const ContactForm = () => {
 
   return (
     <div>
-      {status === 'success' && <Notification message={"Email sent successfully!"} type="success"/>}
-      {status === 'error' && <Notification message={"Error sending email!"} type="error"/>}
+      {status === "success" && (
+        <Notification message={t.emailSendSuccess} type="success" />
+      )}
+      {status === "error" && (
+        <Notification message={t.emailSendError} type="error" />
+      )}
       <div className={styles.container}>
-        <h1>Contact Us</h1>
+        <h1>{t.contactUs}</h1>
         <div className={styles.contentWrapper}>
           <div className={styles.contactInfoContainer}>
             <div className={styles.contactInfoItem}>
-              Email adresa
+              {t.emailAddress}
               <div className={styles.contactInfoSubitemTwo}>
                 tonci.andrijic@gmail.com
               </div>
             </div>
             <div className={styles.contactInfoItem}>
-              Broj mobitela (Tonči Andrijić)
+              {t.phoneNumber} (Tonči Andrijić)
               <div className={styles.contactInfoSubitemTwo}>
                 +385 98 181 6135
               </div>
             </div>
             <div className={styles.contactInfoItem}>
-              Adresa
+              {t.address}
               <div className={styles.contactInfoSubitemTwo}>
                 Zaglav 27, 20271 Blato Croatia
               </div>
             </div>
           </div>
           <section className={styles.contactFormContainer}>
-            <h3>Send us an email</h3>
+            <h3>{t.sendUsEmail}</h3>
             <form
               className={styles.contactForm}
               onSubmit={handleSubmit(onSubmitForm)}
@@ -75,21 +85,21 @@ const ContactForm = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Ime i prezime"
+                  placeholder={t.name}
                   {...register("name", {
-                    required: "You must enter your name",
+                    required: `${t.nameRequired}`,
                     minLength: {
                       value: 3,
-                      message: "This is not long enough to be a name",
+                      message: `${t.nameTooShort}`,
                     },
                     maxLength: {
                       value: 120,
-                      message: "This is too long",
+                      message: `${t.nameTooLong}`,
                     },
                     pattern: {
                       value:
                         /^[a-z\u0161\u0111\u010D\u0107\u017E\u00EB\u002D ]*$/gi,
-                      message: "Invalid name input",
+                      message: `${t.namePattern}`,
                     },
                   })}
                 />
@@ -103,18 +113,18 @@ const ContactForm = () => {
                   name="email"
                   placeholder="Email"
                   {...register("email", {
-                    required: "You must enter your email address",
+                    required: `${t.emailRequired}`,
                     minLength: {
                       value: 8,
-                      message: "This is not long enough to be an email",
+                      message: `${t.emailTooShort}`,
                     },
                     maxLength: {
                       value: 120,
-                      message: "This is too long",
+                      message: `${t.emailTooLong}`,
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address",
+                      message: `${t.emailPattern}`,
                     },
                   })}
                 />
@@ -128,19 +138,17 @@ const ContactForm = () => {
                   cols="60"
                   rows="8"
                   id="description"
-                  placeholder="Message"
+                  placeholder={t.message}
                   name="message"
                   {...register("message", {
-                    required: "You must enter your message",
-                    message: "You must enter your message",
+                    required: `${t.messageRequired}`,
                     minLength: {
                       value: 10,
-                      message: "This is not long enough to be a message",
+                      message: `${t.messageTooShort}`,
                     },
                     maxLength: {
                       value: 3000,
-                      message:
-                        "Your message can't be longer than 3000 characters",
+                      message: `${t.messageTooLong}`,
                     },
                   })}
                 />
@@ -149,7 +157,7 @@ const ContactForm = () => {
                 </span>
               </div>
               <button type="submit" className={styles.sendEmailBtn}>
-                Send
+                {t.send}
               </button>
             </form>
           </section>

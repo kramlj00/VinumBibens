@@ -5,13 +5,21 @@ import Logo from "../commons/Logo";
 import styles from "./navBar.module.scss";
 import LanguageOptions from "../LanguageOptions";
 import { FaBars } from "react-icons/fa";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import hr from "../../locales/hr";
 
-const MENU_LIST = [
-  { text: "Rooms", href: "/rooms" },
-  { text: "Exterior", href: "/exterior" },
-  { text: "Contact us", href: "/contact" },
-];
 const Navbar = ({ activeTab, toggle, isOpen }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
+  const MENU_LIST = [
+    { text: `${t.rooms}`, href: "/rooms" },
+    { text: `${t.exterior}`, href: "/exterior" },
+    { text: `${t.contact}`, href: "/contact" },
+  ];
+
   return (
     <header className={styles.navHeader}>
       <Link href={"/"}>
@@ -38,7 +46,7 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="bookNowBtn">Book now</button>
+          <button className="bookNowBtn">{t.bookNow}</button>
         </a>
       </div>
       <div className={styles.languageOptionsContainer}>

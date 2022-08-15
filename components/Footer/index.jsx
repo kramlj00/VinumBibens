@@ -1,11 +1,18 @@
 import React from "react";
 import styles from "./footer.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import hr from "../../locales/hr";
 
 const Footer = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   const footerItems = [
-    { label: "Rooms", path: "/rooms" },
-    { label: "Exterior", path: "/exterior" },
+    { label: `${t.rooms}`, path: "/rooms" },
+    { label: `${t.exterior}`, path: "/exterior" },
   ];
 
   return (
@@ -22,7 +29,7 @@ const Footer = () => {
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
           <Link href={"/contact_us"}>
-            <div className={styles.footerItemTitle}>Contact us</div>
+            <div className={styles.footerItemTitle}>{t.contactUs}</div>
           </Link>
           <div className={styles.footerItemSubtitle}>
             andrijichouse@gmail.com
@@ -44,7 +51,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={styles.footerItemTitle}>Book now</div>
+          <div className={styles.footerItemTitle}>{t.bookNow}</div>
         </a>
       </section>
       <div className={styles.rightsContainer}>

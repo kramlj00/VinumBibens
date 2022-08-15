@@ -1,9 +1,16 @@
-import Head from 'next/head';
-import Layout from '../layout/layout';
+import Head from "next/head";
+import Layout from "../layout/layout";
 import MainImage from "../components/commons/MainImage";
-import ImageGallery from '../components/commons/ImageGallery';
+import ImageGallery from "../components/commons/ImageGallery";
+import en from "../locales/en";
+import hr from "../locales/hr";
+import { useRouter } from "next/router";
 
 export default function Rooms() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   const roomsImages = [
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702040/rooms/room2-image_f63dok.jpg",
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702040/rooms/room3-image_so8ux6.jpg",
@@ -23,14 +30,19 @@ export default function Rooms() {
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702042/rooms/room17-image_ir36t2.jpg",
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702043/rooms/room18-image_lbt6nf.jpg",
   ];
-  
+
   return (
     <Layout activeTab="Rooms">
       <Head>
         <title>Rooms</title>
       </Head>
-      <MainImage src="https://res.cloudinary.com/kristina1950/image/upload/v1659702040/rooms/room6-image_n64brb.jpg" name="room.jpg" sayingFirstPart="Enjoy your dream" sayingSecondPart="vacation"/>
-      <ImageGallery imageList={roomsImages}/>
+      <MainImage
+        src="https://res.cloudinary.com/kristina1950/image/upload/v1659702040/rooms/room6-image_n64brb.jpg"
+        name="room.jpg"
+        sayingFirstPart={t.roomsSayingPartOne}
+        sayingSecondPart={t.roomsSayingPartTwo}
+      />
+      <ImageGallery imageList={roomsImages} />
     </Layout>
   );
 }

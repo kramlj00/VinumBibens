@@ -2,8 +2,15 @@ import Head from "next/head";
 import Layout from "../layout/layout";
 import MainImage from "../components/commons/MainImage";
 import ImageGallery from "../components/commons/ImageGallery";
+import en from "../locales/en";
+import hr from "../locales/hr";
+import { useRouter } from "next/router";
 
 export default function Rooms() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   const exteriorImages = [
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702141/exterior/exterior2-image_vpmxap.jpg",
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702142/exterior/exterior3-image_mnp0jn.jpg",
@@ -33,7 +40,7 @@ export default function Rooms() {
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702184/exterior/DJI_0364_dnq2hj.jpg",
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702184/exterior/DJI_0360_bivaej.jpg",
     "https://res.cloudinary.com/kristina1950/image/upload/v1659702183/exterior/DJI_0361_tfwlqg.jpg",
-    "https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg"
+    "https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg",
   ];
 
   return (
@@ -44,8 +51,8 @@ export default function Rooms() {
       <MainImage
         src="https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg"
         name="exterior.jpg"
-        sayingFirstPart="Luxury by the"
-        sayingSecondPart="sea"
+        sayingFirstPart={t.exteriorSayingPartOne}
+        sayingSecondPart={t.exteriorSayingPartTwo}
       />
       <ImageGallery imageList={exteriorImages} />
     </Layout>
