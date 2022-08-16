@@ -34,7 +34,7 @@ export default function Rooms() {
   return (
     <Layout activeTab="Rooms">
       <Head>
-        <title>Rooms</title>
+        <title>{t.rooms}</title>
       </Head>
       <MainImage
         src="/images/room-image.webp"

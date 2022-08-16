@@ -25,7 +25,7 @@ export default function MainImage({
   }, []);
 
   const changeOpacity = () => {
-    if (window.scrollY >= 420) {
+    if (window.scrollY >= 450) {
       setIsScrolling(true);
     } else {
       setIsScrolling(false);
