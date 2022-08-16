@@ -21,11 +21,9 @@ const ContactForm = () => {
   } = useForm();
 
   async function onSubmitForm(values) {
-    // setSubmitted(true);
-
     let config = {
       method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      url: '/api/contact',
       headers: {
         "Content-Type": "application/json",
       },

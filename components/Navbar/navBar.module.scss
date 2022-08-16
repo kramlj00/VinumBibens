@@ -2,17 +2,17 @@
 @import 'styles/utils/_breakpoints';
 
   .navHeader {
-    padding: 0 $spacing-large;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5 rem calc((100vw - 1000px) / 2);
     z-index: 100;
     background-color: $color-gray-10;
     position: fixed;
     width: 100%;
     top: 0;
+    padding: 0 $spacing-large;
+
 
     @media screen and (max-width: $small) {
       padding: 0 $spacing-medium;
