@@ -49,7 +49,7 @@ export default function Rooms() {
         <title>Exerior</title>
       </Head>
       <MainImage
-        src="https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg"
+        src="/images/exterior-image.webp"
         name="exterior.jpg"
         sayingFirstPart={t.exteriorSayingPartOne}
         sayingSecondPart={t.exteriorSayingPartTwo}

@@ -37,7 +37,7 @@ export default function Rooms() {
         <title>Rooms</title>
       </Head>
       <MainImage
-        src="https://res.cloudinary.com/kristina1950/image/upload/v1659702040/rooms/room6-image_n64brb.jpg"
+        src="/images/room-image.webp"
         name="room.jpg"
         sayingFirstPart={t.roomsSayingPartOne}
         sayingSecondPart={t.roomsSayingPartTwo}

@@ -17,7 +17,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <MainImage
-        src="/images/home.jpg"
+        src="/images/home-image.webp"
         name="home.jpg"
         sayingFirstPart={t.homeSayingPartOne}
         sayingSecondPart={t.homeSayingPartTwo}
