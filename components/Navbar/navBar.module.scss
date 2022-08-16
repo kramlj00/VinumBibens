@@ -36,13 +36,13 @@
       font-size: $font-size-large;
       color: $color-gray-40;
       cursor: pointer;
-      transition: all 0.2s ease-out;
+      transition: all 0.7s ease-out;
     }
   }
 
   .openHamburgerBar {
     transform: rotate(90deg);
-    transition: all 0.2s ease-out;
+    transition: all 0.7s ease-out;
   }
   
   .languageOptionsContainer {

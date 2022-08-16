@@ -55,7 +55,7 @@ const Footer = () => {
         </a>
       </section>
       <div className={styles.rightsContainer}>
-        Andrijić House &copy; {new Date().getFullYear()} All rights reserved.
+        Andrijić House &copy; {new Date().getFullYear()} {t.rightsInfo}
       </div>
     </footer>
   );

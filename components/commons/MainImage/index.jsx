@@ -1,6 +1,9 @@
 import Image from "next/image";
 import styles from "./mainImage.module.scss";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import en from "../../../locales/en";
+import hr from "../../../locales/hr";
 
 export default function MainImage({
   src,
@@ -8,6 +11,10 @@ export default function MainImage({
   sayingFirstPart,
   sayingSecondPart,
 }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
@@ -41,7 +48,7 @@ export default function MainImage({
       />
       <section className={styles.sayingWrapper}>
         <h1 className={styles.saying}>
-          {sayingFirstPart} <br /> {sayingSecondPart}
+          {sayingFirstPart}<br />{sayingSecondPart}
         </h1>
       </section>
       <div className={styles.bookNowContainer}>
@@ -50,7 +57,7 @@ export default function MainImage({
           target="_blank"
           rel="noreferrer"
         >
-          <button className={styles.bookNowHomeBtn}>Book Now</button>
+          <button className={styles.bookNowHomeBtn}>{t.bookNow}</button>
         </a>
       </div>
     </div>

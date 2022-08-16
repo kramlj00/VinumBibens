@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function LanguageOptions() {
   const router = useRouter();
-  console.log(router);
   const lngs = {
     en: { nativeName: "English" },
     hr: { nativeName: "Hrvatski" },
