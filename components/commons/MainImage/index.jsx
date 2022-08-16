@@ -45,6 +45,7 @@ export default function MainImage({
         layout="fill"
         objectFit="cover"
         alt={name}
+        unoptimized={true}
       />
       <section className={styles.sayingWrapper}>
         <h1 className={styles.saying}>
