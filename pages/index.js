@@ -21,6 +21,7 @@ export default function Home() {
         name="home.jpg"
         saying={t.homeSaying}
         author="Clifton Fadiman"
+        showWinesButton
       />
       <HomeCard />
     </Layout>

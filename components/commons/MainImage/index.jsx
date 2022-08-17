@@ -6,7 +6,13 @@ import Link from "next/link";
 import en from "../../../locales/en";
 import hr from "../../../locales/hr";
 
-export default function MainImage({ src, name, saying, author }) {
+export default function MainImage({
+  src,
+  name,
+  saying,
+  author,
+  showWinesButton,
+}) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -47,13 +53,15 @@ export default function MainImage({ src, name, saying, author }) {
         <h1 className={styles.saying}>{saying}</h1>
         <p className={styles.sayingAuthor}>- {author}</p>
       </section>
-      <div className={styles.winesButtonContainer}>
-        <Link href={"/wines"}>
-          <a>
-            <button className={styles.winesHomeBtn}>{t.wines}</button>
-          </a>
-        </Link>
-      </div>
+      {showWinesButton && (
+        <div className={styles.winesButtonContainer}>
+          <Link href={"/wines"}>
+            <a>
+              <button className={styles.winesHomeBtn}>{t.wines}</button>
+            </a>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
