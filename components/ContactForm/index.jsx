@@ -61,15 +61,15 @@ const ContactForm = () => {
               </div>
             </div>
             <div className={styles.contactInfoItem}>
-              {t.phoneNumber} (Tonči Andrijić)
+              {t.phoneNumber} (Snježana Ramljak)
               <div className={styles.contactInfoSubitemTwo}>
-                +385 98 181 6135
+                +385 98 985 6445
               </div>
             </div>
             <div className={styles.contactInfoItem}>
               {t.address}
               <div className={styles.contactInfoSubitemTwo}>
-                Zaglav 27, 20271 Blato Croatia
+                Ramljaci 11, 22321 Siverić
               </div>
             </div>
           </div>

@@ -4,6 +4,6 @@ module.exports = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "pickywallpapers.com", "i.pinimg.com", "www.columbustravelmedia.com"],
   },
 };

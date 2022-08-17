@@ -7,7 +7,7 @@ const TransitionedCardFan = () => {
       <div className={styles.cardfan}>
         <div className={`${styles.cardfanImage} ${styles.pic3}`}>
           <Image
-            src="https://res.cloudinary.com/kristina1950/image/upload/v1659702042/rooms/room17-image_ir36t2.jpg"
+            src="https://pickywallpapers.com/img/2018/10/wine-bottles-widescreen-desktop-wallpaper-536-545-hd-wallpapers.jpg"
             alt="cardfan_pic3"
             width={500}
             height={330}
@@ -15,7 +15,7 @@ const TransitionedCardFan = () => {
         </div>
         <div className={`${styles.pic2} ${styles.cardfanImage}`}>
           <Image
-            src="https://res.cloudinary.com/kristina1950/image/upload/v1659702140/exterior/exterior15-image_unyat4.jpg"
+            src="https://i.pinimg.com/originals/3a/e9/31/3ae931705f3fcbca12ed5b5c45d87b8b.png"
             alt="cardfan_pic2"
             width={500}
             height={330}
@@ -23,7 +23,7 @@ const TransitionedCardFan = () => {
         </div>
         <div className={`${styles.pic1} ${styles.cardfanImage}`}>
           <Image
-            src="https://res.cloudinary.com/kristina1950/image/upload/v1659702138/exterior/exterior18-image_fi613x.jpg"
+            src="https://www.columbustravelmedia.com/wp-content/uploads/2017/06/72827659_ml.jpg"
             alt="cardfan_pic1"
             width={500}
             height={330}

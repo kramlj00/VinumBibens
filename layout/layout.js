@@ -3,7 +3,7 @@ import ToggleBars from "../helpers/toggleBars";
 import React, { useState } from "react";
 import styles from "./layout.module.scss";
 
-export const siteTitle = "Andrijić House";
+export const siteTitle = "Vinum Bibens";
 
 export default function Layout({ children, activeTab }) {
   const [isOpen, setIsOpen] = useState(false);

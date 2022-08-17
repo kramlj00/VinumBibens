@@ -5,7 +5,9 @@ const NavItem = ({ text, href, activeTab }) => {
   return (
     <Link href={href}>
       <a
-        className={`${styles.navItem} ${activeTab === text ? styles.active : ""}`}
+        className={`${styles.navItem} ${
+          activeTab === text ? styles.active : ""
+        }`}
       >
         {text}
       </a>

@@ -44,16 +44,16 @@ textarea {
   background-color: $color-gray-10;
   font-family: $font-family-main;
 }
-.bookNowBtn {
+.winesBtn {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 5px;
   cursor: pointer;
   padding: $spacing-small $spacing-large;
-  background-color: $color-gold;
+  background-color: $color-red-20;
   color: $color-white;
   font-size: $font-size-medium;
-  border: 1px solid $color-gold;
+  border: 1px solid $color-red-20;
 
   @media screen and (max-width: $mobile) {
     padding: $spacing-small $spacing-medium;

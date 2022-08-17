@@ -17,10 +17,10 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <MainImage
-        src="/images/home-image.webp"
+        src="/images/pocetna.jpg"
         name="home.jpg"
-        sayingFirstPart={t.homeSayingPartOne}
-        sayingSecondPart={t.homeSayingPartTwo}
+        saying={t.homeSaying}
+        author="Clifton Fadiman"
       />
       <HomeCard />
     </Layout>

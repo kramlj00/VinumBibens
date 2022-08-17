@@ -11,8 +11,8 @@ const Footer = () => {
   const t = locale === "en" ? en : hr;
 
   const footerItems = [
-    { label: `${t.rooms}`, path: "/rooms" },
-    { label: `${t.exterior}`, path: "/exterior" },
+    { label: `${t.wines}`, path: "/wines" },
+    { label: `${t.ourStory}`, path: "/our-story" },
   ];
 
   return (
@@ -21,23 +21,20 @@ const Footer = () => {
         <div className={styles.horizontalLine} />
         <Link href={"/"}>
           <a>
-            <h1 className={styles.footerLogo}>Andrijić House</h1>
+            <h1 className={styles.footerLogo}>Vinum Bibens</h1>
           </a>
         </Link>
         <div className={styles.horizontalLine} />
       </section>
+
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={"/contact_us"}>
+          <Link href={"/contact"}>
             <div className={styles.footerItemTitle}>{t.contactUs}</div>
           </Link>
-          <div className={styles.footerItemSubtitle}>
-            andrijichouse@gmail.com
-          </div>
-          <div className={styles.footerItemSubtitle}>+385 098 181 6135</div>
-          <div className={styles.footerItemSubtitle}>
-            Zaglav 20271, Blato Croatia
-          </div>
+          <div className={styles.footerItemSubtitle}>vinumbibens@gmail.com</div>
+          <div className={styles.footerItemSubtitle}>+385 98 985 6445</div>
+          <div className={styles.footerItemSubtitle}>Ramljaci 11, Siverić</div>
         </div>
         {footerItems.map((footerItem) => (
           <div className={styles.itemContainer} key={footerItem.path}>
@@ -46,16 +43,10 @@ const Footer = () => {
             </Link>
           </div>
         ))}
-        <a
-          href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className={styles.footerItemTitle}>{t.bookNow}</div>
-        </a>
       </section>
+
       <div className={styles.rightsContainer}>
-        Andrijić House &copy; {new Date().getFullYear()} {t.rightsInfo}
+        Vinum Bibens &copy; {new Date().getFullYear()} {t.rightsInfo}
       </div>
     </footer>
   );

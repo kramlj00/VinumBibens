@@ -1,17 +1,18 @@
-@import 'styles/utils/_variables';
+@import "styles/utils/_variables";
 
 .active {
-    color: $color-gold;
+  color: $color-red-20;
 }
 
 .navItem {
-    font-weight: bolder;
-    font-family: $font-family-main;
-    font-size: $font-size-medium-larger;
+  font-weight: bolder;
+  font-family: $font-family-main;
+  font-size: $font-size-medium-larger;
+  padding-right: 50px;
 
-    &:hover {
-        font-weight: bold;
-        color: $color-gold;
-        transition: all 0.3s;
-    }
+  &:hover {
+    font-weight: bold;
+    color: $color-red-20;
+    transition: all 0.3s;
+  }
 }
