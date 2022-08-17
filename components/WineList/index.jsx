@@ -41,6 +41,21 @@ const WineList = () => {
           <div className={`${styles.squareCover} ${styles.roseSquareCover}`}></div>
         </div>
       </div>
+      <div className={styles.wineBlock}>
+        <div className={`${styles.wineBottle} ${styles.wineBottleLeft}`}>
+          <div className={styles.imageContainer}>
+            <Image src="/images/canticum.png" layout="fill" objectFit="fill" />
+          </div>
+          <div className={`${styles.squareCover} ${styles.squareCoverCanticum}`}></div>
+        </div>
+        <div className={styles.wineDescriptionContainer}>
+          <h1 className={styles.wineSort}>Canticum</h1>
+          <p className={styles.wineDescription}>
+            Neki lipi tekst, jedna rečenica ili maksimalno dvi.
+          </p>
+          <p className={styles.readMore}>{t.readMore}</p>
+        </div>
+      </div>
     </section>
   );
 };
