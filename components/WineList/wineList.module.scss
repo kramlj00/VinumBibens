@@ -1,0 +1,83 @@
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
+
+.wineListSection {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+
+  .wineBlockReverse {
+    @media screen and (max-width: $large) {
+      display: flex;
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  .wineBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $large) {
+      flex-direction: column;
+    }
+
+    .wineBottleLeft {
+      margin-right: 60px;
+
+      @media screen and (max-width: $large) {
+        margin-right: 0;
+      }
+    }
+
+    .wineBottle {
+      width: 530px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .imageContainer {
+        position: relative;
+        height: 500px;
+        width: 200px;
+      }
+
+      .squareCover {
+        background-color: $color-red-30;
+        position: absolute;
+        height: 225px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-8deg) rotate(-8deg);
+        opacity: 0.75;
+      }
+
+      .roseSquareCover {
+        background-color: $color-rose;
+      }
+    }
+
+    .wineDescriptionContainer {
+      .wineSort {
+        font-size: $font-size-title;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+
+      .wineDescription {
+        font-family: $font-family-main;
+        font-size: $font-size-medium-large;
+        padding-bottom: 20px;
+      }
+
+      .readMore {
+        font-family: $font-family-main;
+        font-size: $font-size-medium-large;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    }
+  }
+}

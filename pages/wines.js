@@ -4,11 +4,13 @@ import en from "../locales/en";
 import hr from "../locales/hr";
 import Head from "next/head";
 import MainImage from "../components/commons/MainImage";
+import WineList from "../components/WineList";
 
 export default function Wines() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
+
   return (
     <Layout activeTab={t.wines}>
       <Head>
@@ -20,6 +22,7 @@ export default function Wines() {
         saying={t.winesSaying}
         author="Heraklit"
       />
+      <WineList />
     </Layout>
   );
 }
