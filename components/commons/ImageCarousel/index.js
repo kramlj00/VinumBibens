@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Swipe from "react-easy-swipe";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import FsLightbox from "fslightbox-react";
 
 export default function ImageCarousel() {
   const images = [
@@ -12,6 +13,10 @@ export default function ImageCarousel() {
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMoveClicked, setIsMoveClicked] = useState(false);
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
 
   useEffect(() => {
     if (!isMoveClicked) {
@@ -56,6 +61,12 @@ export default function ImageCarousel() {
                     layout="fill"
                     objectFit="contain"
                     className="animate-fadeIn"
+                    onClick={() =>
+                      setLightboxController({
+                        toggler: !lightboxController.toggler,
+                        slide: index + 1,
+                      })
+                    }
                   />
                 </div>
               );
@@ -84,6 +95,13 @@ export default function ImageCarousel() {
           );
         })}
       </div>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={images}
+        slide={lightboxController.slide}
+        initialAnimation="scale-in-long"
+        slideChangeAnimation="scale-in"
+      />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import hr from "../../locales/hr";
