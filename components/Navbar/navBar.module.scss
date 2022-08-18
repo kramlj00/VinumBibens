@@ -12,6 +12,7 @@
   width: 100%;
   top: 0;
   padding: 0 $spacing-large;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
 
   @media screen and (max-width: $small) {
     padding: 0 $spacing-medium;

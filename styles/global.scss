@@ -8,6 +8,9 @@
   outline: none;
   box-sizing: border-box;
 }
+body {
+  background-color: #F5F6FA;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -28,7 +31,8 @@ input {
   margin-bottom: 5px;
   width: 100%;
   font-family: $font-family-main;
-  background-color: $color-gray-10;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
 
   @media screen and (max-width: $small) {
     font-size: $font-size-medium-small;
@@ -41,8 +45,9 @@ textarea {
   padding: 12px 15px;
   width: 100%;
   resize: none;
-  background-color: $color-gray-10;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   font-family: $font-family-main;
+  border-radius: 5px;
 }
 .winesBtn {
   text-transform: uppercase;

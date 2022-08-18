@@ -23,7 +23,7 @@ const ContactForm = () => {
   async function onSubmitForm(values) {
     let config = {
       method: "post",
-      url: '/api/contact',
+      url: "/api/contact",
       headers: {
         "Content-Type": "application/json",
       },
@@ -57,7 +57,7 @@ const ContactForm = () => {
             <div className={styles.contactInfoItem}>
               {t.emailAddress}
               <div className={styles.contactInfoSubitemTwo}>
-                tonci.andrijic@gmail.com
+                vinumbibens@gmail.com
               </div>
             </div>
             <div className={styles.contactInfoItem}>

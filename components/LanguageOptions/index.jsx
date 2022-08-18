@@ -16,8 +16,8 @@ export default function LanguageOptions() {
 
   return (
     <section className={styles.languageOptions}>
-      {Object.keys(lngs).map((lng) => (
-        <div className={styles.option}>
+      {Object.keys(lngs).map((lng, index) => (
+        <div key={index} className={styles.option}>
           <Image
             key={lng}
             width={40}

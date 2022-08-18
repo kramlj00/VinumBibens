@@ -56,7 +56,7 @@ const HomeCard = () => {
         {({ isVisible }) => (
           <section className={styles.countUpSection}>
             {countItems.map((item) => (
-              <div className={styles.countUpItem}>
+              <div className={styles.countUpItem} key={item.description}>
                 <div className={styles.iconContainer}>{item.icon}</div>
                 <div className={styles.numberContainer}>
                   {isVisible && shouldCount ? (
