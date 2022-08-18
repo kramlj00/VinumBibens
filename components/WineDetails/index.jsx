@@ -5,6 +5,7 @@ import hr from "../../locales/hr";
 import styles from "./wineDetails.module.scss";
 import Button from "../commons/Button";
 import Link from "next/link";
+import ImageCarousel from "../commons/ImageCarousel";
 
 export default function WineDetails({
   images,
@@ -22,7 +23,7 @@ export default function WineDetails({
       <section className={styles.wineSection}>
         <div className={styles.imageCarouselContainer}>
           <div className={styles.imageWrapper}>
-            <Image src={images[0]} layout="fill" objectFit="fill" />
+            <ImageCarousel images={images}/>
           </div>
         </div>
         <div className={styles.wineDetailsContainer}>
