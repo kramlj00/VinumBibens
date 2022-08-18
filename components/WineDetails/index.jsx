@@ -29,13 +29,13 @@ export default function WineDetails({
           <h1>{sort}</h1>
           <p className={styles.wineDescription}>{description}</p>
           <p>
-            Postotak alkohola: <strong>{alcoholPercentage}%</strong>
+            {t.alcoholPercentage} <strong>{alcoholPercentage}%</strong>
           </p>
           <p>
-            Vinogorje: <strong></strong>
+            {t.vineyard} <strong>Drniš</strong>
           </p>
           <p>
-            CIJENA: <strong>{price}HRK/0.75L</strong>
+            {t.price} <strong>{price}HRK/0.75L</strong>
           </p>
           <Link href={"/contact"}>
             <a>

@@ -10,19 +10,19 @@ export default function Merlot() {
   const { locale } = router;
   const t = locale === "en" ? en : hr;
 
-  const images = ["/images/merlot.png"];
+  const images = ["/images/rose.png"];
 
   return (
     <Layout>
       <Head>
-        <title>Merlot</title>
+        <title>Rose</title>
       </Head>
       <WineDetails
         images={images}
-        sort="Merlot"
-        description={t.merlotInfo}
-        alcoholPercentage={13}
-        price={60}
+        sort="Rose"
+        description={t.roseInfo}
+        alcoholPercentage={12}
+        price={70}
       />
     </Layout>
   );
