@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import hr from "../../locales/hr";
 import styles from "./wineList.module.scss";
+import Link from "next/link";
 
 const WineList = () => {
   const router = useRouter();
@@ -23,7 +24,9 @@ const WineList = () => {
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <p className={styles.readMore}>{t.readMore}</p>
+          <Link href={"/wines/merlot"}>
+            <p className={styles.readMore}>{t.readMore}</p>
+          </Link>
         </div>
       </div>
       <div className={`${styles.wineBlock} ${styles.wineBlockReverse}`}>
@@ -32,13 +35,17 @@ const WineList = () => {
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <p className={styles.readMore}>{t.readMore}</p>
+          <Link href={"/wines/merlot"}>
+            <p className={styles.readMore}>{t.readMore}</p>
+          </Link>
         </div>
         <div className={styles.wineBottle}>
           <div className={styles.imageContainer}>
             <Image src="/images/rose.png" layout="fill" objectFit="fill" />
           </div>
-          <div className={`${styles.squareCover} ${styles.roseSquareCover}`}></div>
+          <div
+            className={`${styles.squareCover} ${styles.roseSquareCover}`}
+          ></div>
         </div>
       </div>
       <div className={styles.wineBlock}>
@@ -46,14 +53,18 @@ const WineList = () => {
           <div className={styles.imageContainer}>
             <Image src="/images/canticum.png" layout="fill" objectFit="fill" />
           </div>
-          <div className={`${styles.squareCover} ${styles.squareCoverCanticum}`}></div>
+          <div
+            className={`${styles.squareCover} ${styles.squareCoverCanticum}`}
+          ></div>
         </div>
         <div className={styles.wineDescriptionContainer}>
           <h1 className={styles.wineSort}>Canticum</h1>
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <p className={styles.readMore}>{t.readMore}</p>
+          <Link href={"/wines/merlot"}>
+            <p className={styles.readMore}>{t.readMore}</p>
+          </Link>
         </div>
       </div>
     </section>

@@ -20,9 +20,7 @@ const Footer = () => {
       <section className={styles.separatorBar}>
         <div className={styles.horizontalLine} />
         <Link href={"/"}>
-          <a>
-            <h1 className={styles.footerLogo}>Vinum Bibens</h1>
-          </a>
+          <h1 className={styles.footerLogo}>Vinum Bibens</h1>
         </Link>
         <div className={styles.horizontalLine} />
       </section>

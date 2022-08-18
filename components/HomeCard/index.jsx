@@ -46,7 +46,15 @@ const HomeCard = () => {
       <section className={styles.cardContainer}>
         <div className={styles.leftSide}>
           <h1>{t.welcomeTitle}</h1>
-          <p className={styles.description}>{t.houseInfo}</p>
+          <p className={styles.description}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
         <div className={styles.rightSide}>
           <TransitionedCardFan />
@@ -60,7 +68,11 @@ const HomeCard = () => {
                 <div className={styles.iconContainer}>{item.icon}</div>
                 <div className={styles.numberContainer}>
                   {isVisible && shouldCount ? (
-                    <CountUp end={item.number} duration={3} onEnd={() => setShouldCount(false)}/>
+                    <CountUp
+                      end={item.number}
+                      duration={3}
+                      onEnd={() => setShouldCount(false)}
+                    />
                   ) : (
                     <h1>{item.number}</h1>
                   )}

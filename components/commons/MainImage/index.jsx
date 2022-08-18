@@ -56,9 +56,7 @@ export default function MainImage({
       {showWinesButton && (
         <div className={styles.winesButtonContainer}>
           <Link href={"/wines"}>
-            <a>
-              <button className={styles.winesHomeBtn}>{t.wines}</button>
-            </a>
+            <button className={styles.winesHomeBtn}>{t.wines}</button>
           </Link>
         </div>
       )}
