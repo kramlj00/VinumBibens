@@ -1,25 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./cardFan.module.scss";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 const TransitionedCardFan = () => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
   });
-  // const cardFanRef = useRef(null);
   const [isSpread, setIsSpread] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setIsSpread(false);
-    }, [5000])
+    }, [5000]);
   }, []);
 
   return (
     <div>
-      <div className={inView && isSpread ? styles.spreadCardfan : styles.cardfan} ref={ref}>
+      <div
+        className={inView && isSpread ? styles.spreadCardfan : styles.cardfan}
+        ref={ref}
+      >
         <div className={`${styles.cardfanImage} ${styles.pic3}`}>
           <Image
             src="https://pickywallpapers.com/img/2018/10/wine-bottles-widescreen-desktop-wallpaper-536-545-hd-wallpapers.jpg"

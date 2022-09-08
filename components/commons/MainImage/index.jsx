@@ -50,11 +50,28 @@ export default function MainImage({
         unoptimized={true}
       />
       <section className={styles.sayingWrapper}>
-        <h1 className={styles.saying}>{saying}</h1>
-        <p className={styles.sayingAuthor}>- {author}</p>
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className={styles.saying}
+        >
+          {saying}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className={styles.sayingAuthor}
+        >
+          - {author}
+        </p>
       </section>
       {showWinesButton && (
-        <div className={styles.winesButtonContainer}>
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          data-aos-delay="600"
+          className={styles.winesButtonContainer}
+        >
           <Link href={"/wines"}>
             <button className={styles.winesHomeBtn}>{t.wines}</button>
           </Link>

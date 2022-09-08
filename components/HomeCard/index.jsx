@@ -43,12 +43,14 @@ const HomeCard = () => {
 
   return (
     <div>
-      <section className={styles.cardContainer}>
+      <section
+        data-aos="fade-right"
+        data-aos-duration="1100"
+        className={styles.cardContainer}
+      >
         <div className={styles.leftSide}>
           <h1>{t.welcomeTitle}</h1>
-          <p className={styles.description}>
-            {t.description}
-          </p>
+          <p className={styles.description}>{t.description}</p>
         </div>
         <div className={styles.rightSide}>
           <TransitionedCardFan />
@@ -56,7 +58,11 @@ const HomeCard = () => {
       </section>
       <VisibilitySensor partialVisibility offset={{ bottom: 1 }}>
         {({ isVisible }) => (
-          <section className={styles.countUpSection}>
+          <section
+            data-aos="fade-right"
+            data-aos-duration="1100"
+            className={styles.countUpSection}
+          >
             {countItems.map((item) => (
               <div className={styles.countUpItem} key={item.description}>
                 <div className={styles.iconContainer}>{item.icon}</div>

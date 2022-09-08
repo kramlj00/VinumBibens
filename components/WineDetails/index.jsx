@@ -19,10 +19,15 @@ export default function WineDetails({
 
   return (
     <div className={styles.container}>
-      <section className={styles.wineSection}>
+      <section
+        data-aos="fade-right"
+        data-aos-duration="1200"
+        data-aos-delay="500"
+        className={styles.wineSection}
+      >
         <div className={styles.imageCarouselContainer}>
           <div className={styles.imageWrapper}>
-            <ImageCarousel images={images}/>
+            <ImageCarousel images={images} />
           </div>
         </div>
         <div className={styles.wineDetailsContainer}>

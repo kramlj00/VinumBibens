@@ -51,8 +51,15 @@ const ContactForm = () => {
         <Notification message={t.emailSendError} type="error" />
       )}
       <div className={styles.container}>
-        <h1>{t.contactUs}</h1>
-        <div className={styles.contentWrapper}>
+        <h1 data-aos="zoom-in" data-aos-duration="1000">
+          {t.contactUs}
+        </h1>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="500"
+          className={styles.contentWrapper}
+        >
           <div className={styles.contactInfoContainer}>
             <div className={styles.contactInfoItem}>
               {t.emailAddress}
