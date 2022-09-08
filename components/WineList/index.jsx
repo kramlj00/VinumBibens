@@ -58,9 +58,9 @@ const WineList = () => {
           <div
             className={`${styles.squareCover} ${styles.squareCoverCanticum}`}
           >
-            <div className={styles.logoContainer}>
+            {/* <div className={styles.logoContainer}> */}
               <Image src="/images/logo.png" layout="fill" objectFit="cover" />
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <div className={styles.wineDescriptionContainer}>
