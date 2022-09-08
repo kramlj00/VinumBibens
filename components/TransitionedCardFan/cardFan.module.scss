@@ -1,3 +1,38 @@
+.spreadCardfan {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 30px;
+
+  .pic3 {
+    transform: translate(-95px, 0px) rotate(-12deg);
+  }
+
+  .pic2 {
+    transform: translate(95px, 0px) rotate(12deg);
+  }
+
+  .pic1 {
+    transform: scale(1.08);
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    filter: alpha(opacity = 100);
+    filter: none;
+  }
+
+  .cardfanImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border: 12px solid #ffe;
+    border-bottom: 8px solid #ffe;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+    transform-origin: center 460px;
+    transition: all 0.8s linear;
+    float: right;
+  }
+}
+
 .cardfan {
   width: 50%;
   margin: 0 auto;
