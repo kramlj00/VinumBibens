@@ -17,7 +17,9 @@ const WineList = () => {
           <div className={styles.imageContainer}>
             <Image src="/images/merlot.png" layout="fill" objectFit="fill" />
           </div>
-          <div className={styles.squareCover}></div>
+          <div className={styles.squareCover}>
+            <Image src="/images/logo.png" layout="fill" objectFit="cover" />
+          </div>
         </div>
         <div className={styles.wineDescriptionContainer}>
           <h1 className={styles.wineSort}>Merlot</h1>
@@ -43,9 +45,9 @@ const WineList = () => {
           <div className={styles.imageContainer}>
             <Image src="/images/rose.png" layout="fill" objectFit="fill" />
           </div>
-          <div
-            className={`${styles.squareCover} ${styles.roseSquareCover}`}
-          ></div>
+          <div className={`${styles.squareCover} ${styles.roseSquareCover}`}>
+            <Image src="/images/logo.png" layout="fill" objectFit="cover" />
+          </div>
         </div>
       </div>
       <div className={styles.wineBlock}>
@@ -55,7 +57,11 @@ const WineList = () => {
           </div>
           <div
             className={`${styles.squareCover} ${styles.squareCoverCanticum}`}
-          ></div>
+          >
+            <div className={styles.logoContainer}>
+              <Image src="/images/logo.png" layout="fill" objectFit="cover" />
+            </div>
+          </div>
         </div>
         <div className={styles.wineDescriptionContainer}>
           <h1 className={styles.wineSort}>Canticum</h1>
