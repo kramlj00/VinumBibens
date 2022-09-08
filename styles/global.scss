@@ -65,8 +65,28 @@ textarea {
   }
 
   &:hover {
-    background-color: #dbae6b;
+    background-color: #ebe0d0;
     transform: scale(1.03);
     transition: all 0.4s ease-out;
   }
+}
+
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 100vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #a85156;
+  border-radius: 100vh;
+  border: 1px solid #f6f7ed;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #b8001f;
 }
