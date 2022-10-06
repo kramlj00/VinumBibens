@@ -3,7 +3,7 @@ import Layout from "../layout/layout";
 import en from "../locales/en";
 import hr from "../locales/hr";
 import Head from "next/head";
-import MainImage from "../components/commons/MainImage";
+import OurStoryComponent from "../components/OurStoryComponent/OurStoryComponent";
 
 export default function OurStory() {
   const router = useRouter();
@@ -15,12 +15,7 @@ export default function OurStory() {
       <Head>
         <title>{t.ourStory}</title>
       </Head>
-      <MainImage
-        src="/images/vino.jpg"
-        name="wine.jpg"
-        saying={t.winesSaying}
-        author="Heraklit"
-      />
+      <OurStoryComponent />
     </Layout>
   );
 }

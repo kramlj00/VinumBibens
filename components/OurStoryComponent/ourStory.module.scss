@@ -1,0 +1,27 @@
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
+
+.allContentContainer {
+  display: grid;
+  width: 1152px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.aboutUsDescription {
+  line-height: 38px;
+  font-family: $font-family-main;
+  font-size: $font-size-medium-large;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium-larger;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium;
+    line-height: 25px;
+    text-indent: 30px;
+  }
+}
