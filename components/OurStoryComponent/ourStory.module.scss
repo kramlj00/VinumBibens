@@ -9,6 +9,18 @@
   justify-items: center;
   padding-top: 100px;
   margin: auto;
+
+  @media screen and (max-width: $desktop) {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+}
+
+.aboutUsContainer {
+  @media screen and (max-width: $desktop) {
+    grid-row: 1;
+  }
 }
 
 .aboutUsDescription {

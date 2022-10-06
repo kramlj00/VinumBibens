@@ -21,7 +21,7 @@ export default function OurStoryComponent() {
           tradicija,... bla bla bla
         </p>
       </div>
-      <div className={[styles.aboutUsContainer]}>
+      <div className={styles.aboutUsContainerTwo}>
         <h1>O nama</h1>
         <p className={styles.aboutUsDescription}>
           Tu triba napisat nešto o dobroj poziciji vinograda, bogatstva tla.
