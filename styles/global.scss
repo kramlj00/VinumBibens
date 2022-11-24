@@ -9,7 +9,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -70,7 +71,6 @@ textarea {
     transition: all 0.4s ease-out;
   }
 }
-
 
 *::-webkit-scrollbar {
   width: 10px;
