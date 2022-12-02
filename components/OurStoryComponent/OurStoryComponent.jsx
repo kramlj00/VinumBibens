@@ -16,18 +16,18 @@ export default function OurStoryComponent() {
         <h1>O nama</h1>
         <p className={styles.aboutUsDescription}>
           Tu triba napisat nešto o dobroj poziciji vinograda, bogatstva tla.
-          Triba spomenit da je nositelj vinarije Vinum Bibens OPG Ramljak. Kad
-          smo se počeli bavit s tim. Triba napist da je to obiteljska
-          tradicija,... bla bla bla
+          Triba spomenit da je nositelj vinarije OPG Željko Ramljak. Kad smo se
+          počeli bavit s tim. Triba napist da je to obiteljska tradicija,... bla
+          bla bla
         </p>
       </div>
       <div className={styles.aboutUsContainerTwo}>
         <h1>O nama</h1>
         <p className={styles.aboutUsDescription}>
           Tu triba napisat nešto o dobroj poziciji vinograda, bogatstva tla.
-          Triba spomenit da je nositelj vinarije Vinum Bibens OPG Ramljak. Kad
-          smo se počeli bavit s tim. Triba napist da je to obiteljska
-          tradicija,... bla bla bla
+          Triba spomenit da je nositelj vinarije OPG Željko Ramljak. Kad smo se
+          počeli bavit s tim. Triba napist da je to obiteljska tradicija,... bla
+          bla bla
         </p>
       </div>
       <div className={styles.mediaContainer}>

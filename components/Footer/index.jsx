@@ -20,7 +20,7 @@ const Footer = () => {
       <section className={styles.separatorBar}>
         <div className={styles.horizontalLine} />
         <Link href={"/"}>
-          <h1 className={styles.footerLogo}>Vinum Bibens</h1>
+          <h1 className={styles.footerLogo}>Vina Ramljak</h1>
         </Link>
         <div className={styles.horizontalLine} />
       </section>
@@ -44,7 +44,7 @@ const Footer = () => {
       </section>
 
       <div className={styles.rightsContainer}>
-        Vinum Bibens &copy; {new Date().getFullYear()} {t.rightsInfo}
+        Vina Ramljak &copy; {new Date().getFullYear()} {t.rightsInfo}
       </div>
     </footer>
   );
