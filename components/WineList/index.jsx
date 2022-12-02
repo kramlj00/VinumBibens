@@ -43,7 +43,7 @@ const WineList = () => {
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <Link href={"/wines/merlot"}>
+          <Link href={"/wines/merlot"} legacyBehavior>
             <p className={styles.readMore}>{t.readMore}</p>
           </Link>
         </div>
@@ -59,7 +59,7 @@ const WineList = () => {
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <Link href={"/wines/rose"}>
+          <Link href={"/wines/rose"} legacyBehavior>
             <p className={styles.readMore}>{t.readMore}</p>
           </Link>
         </div>
@@ -121,7 +121,7 @@ const WineList = () => {
           <p className={styles.wineDescription}>
             Neki lipi tekst, jedna rečenica ili maksimalno dvi.
           </p>
-          <Link href={"/wines/canticum"}>
+          <Link href={"/wines/canticum"} legacyBehavior>
             <p className={styles.readMore}>{t.readMore}</p>
           </Link>
         </div>

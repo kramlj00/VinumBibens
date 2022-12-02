@@ -43,9 +43,7 @@ export default function WineDetails({
             {t.price} <strong>{price}HRK/0.75L</strong>
           </p>
           <Link href={"/contact"}>
-            <a>
-              <Button>{t.contact}</Button>
-            </a>
+            <Button>{t.contact}</Button>
           </Link>
         </div>
       </section>

@@ -72,7 +72,7 @@ export default function MainImage({
           data-aos-delay="600"
           className={styles.winesButtonContainer}
         >
-          <Link href={"/wines"}>
+          <Link href={"/wines"} legacyBehavior>
             <button className={styles.winesHomeBtn}>{t.wines}</button>
           </Link>
         </div>
